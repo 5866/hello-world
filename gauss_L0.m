@@ -1,12 +1,13 @@
 function [L0,NN]=gauss_L0(L,belt)
-% ¸Ã³ÌÐòÓÃÀ´¼ÆËã¸ßË¹Í¶Ó°µÄÖÐÑë×ÓÎçÏß¾­¶ÈL0ºÍ´øºÅNN
-% L ´óµØ¾­¶È£¨degree£©
-% belt ´ø¿í£¨6¶È»ò3¶È£©
-% ÄÏÑôÊ¦·¶Ñ§Ôº ¸ß´º´º 2019.11
+% è¯¥ç¨‹åºç”¨æ¥è®¡ç®—é«˜æ–¯æŠ•å½±çš„ä¸­å¤®å­åˆçº¿ç»åº¦L0å’Œå¸¦å·NN
+% L å¤§åœ°ç»åº¦ï¼ˆdegreeï¼‰
+% belt å¸¦å®½ï¼ˆ6åº¦æˆ–3åº¦ï¼‰
+% å—é˜³å¸ˆèŒƒå­¦é™¢ é«˜æ˜¥æ˜¥ 2019.11
 defval('L',114.5)
 defval('belt',6)
 aa = find(L<0);
 L(aa) = L(aa)+360;
+
 
 if belt==6
     NN=fix(L/6)+1;
